@@ -11,20 +11,26 @@
 ### Will turn a list like this
 
 > should
+> 
 > actually
+> 
 > learn
+> 
 > regex
 
 ### into this
 
 > 'should',
+> 
 > 'actually',
+> 
 > 'learn',
+> 
 > 'regex',
 
 
 
-# Captures things in (brackets)
+### Captures things in (brackets)
 (\((?:\[??[^\[]*?\)))  
 
 
