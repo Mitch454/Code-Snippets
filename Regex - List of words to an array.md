@@ -9,17 +9,18 @@
 >'$1',
 
 ### Will turn a list like this
->should
->actually
->learn
->regex
+
+> should
+> actually
+> learn
+> regex
 
 ### into this
 
->'should',
->'actually',
->'learn',
->'regex',
+> 'should',
+> 'actually',
+> 'learn',
+> 'regex',
 
 
 
