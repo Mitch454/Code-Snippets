@@ -1,7 +1,7 @@
-## List of words to an array
+## Using a find and replacer with regex
 
 ### Find
->([A-Za-z]+)$       	---- Alpha
+>([A-Za-z]+)$     ---- Alpha
 >
 >([0-9]+)$       	---- numbers
 
