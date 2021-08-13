@@ -1,3 +1,5 @@
+# SCP Cheatsheet
+
 ### Copy the file "foobar.txt" from a remote host to the local host
 
     scp your_username@remotehost:foobar.txt /some/local/directory 
