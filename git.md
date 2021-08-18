@@ -1,16 +1,16 @@
 # Git Cheatsheet
 
 ```
-git config --global user.name "Mitch Pearce"
+git config --global user.name "Put Name"
 
-git config --global user.email Mitch454@Gmail.com
+git config --global user.email Your@Email.ck
 
 git config --global color.ui auto
 
 git config --global credential.helper store	
 
 
-The following method is the most effective way to force git pull:
+The following method is a way to force git pull:
 git fetch origin master
 git reset --hard origin/master
 
