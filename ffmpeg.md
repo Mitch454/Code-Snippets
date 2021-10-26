@@ -24,3 +24,12 @@ ffmpeg -i input.mp4 -filter:v setpts=2.0*PTS slower.mp4
 ```
 
 
+### compress 
+```
+ffmpeg -i input.mp4 -vcodec libx264 -crf 24 output.mp4
+```
+
+### scale down 1/3
+```
+ffmpeg -i input.mp4 -vf "scale=iw/3:ih/3" output.mp4
+```
