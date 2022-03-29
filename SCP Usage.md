@@ -37,3 +37,29 @@
     scp username@remotehost:/some/remote/directory/\{a,b,c\} . 
 
     scp username@remotehost:~/\{foo.txt,bar.txt\} . 
+    
+### To copy all from Local Location to Remote Location (Upload)
+
+scp -r /path/from/local username@hostname:/path/to/remote
+
+### To copy all from Remote Location to Local Location (Download)
+
+scp -r username@hostname:/path/from/remote /path/to/local
+
+###  Custom Port where xxxx is custom port number
+
+ scp -r -P xxxx username@hostname:/path/from/remote /path/to/local
+
+### Copy on current directory from Remote to Local
+
+scp -r username@hostname:/path/from/remote .
+
+### Help:
+
+    -r Recursively copy all directories and files
+    Always use full location from /, Get full location by pwd
+    scp will replace all existing files
+    hostname will be hostname or IP address
+    if custom port is needed (besides port 22) use -P portnumber
+    . (dot) - it means current working directory, So download/copy from server and paste here only.
+
