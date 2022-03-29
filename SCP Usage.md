@@ -40,19 +40,19 @@
     
 ### To copy all from Local Location to Remote Location (Upload)
 
-scp -r /path/from/local username@hostname:/path/to/remote
+    scp -r /path/from/local username@hostname:/path/to/remote
 
 ### To copy all from Remote Location to Local Location (Download)
 
-scp -r username@hostname:/path/from/remote /path/to/local
+    scp -r username@hostname:/path/from/remote /path/to/local
 
 ###  Custom Port where xxxx is custom port number
 
- scp -r -P xxxx username@hostname:/path/from/remote /path/to/local
+    scp -r -P xxxx username@hostname:/path/from/remote /path/to/local
 
 ### Copy on current directory from Remote to Local
 
-scp -r username@hostname:/path/from/remote .
+    scp -r username@hostname:/path/from/remote .
 
 ### Help:
 
