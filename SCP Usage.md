@@ -4,9 +4,17 @@
 
     scp your_username@remotehost:foobar.txt /some/local/directory 
 
+
 ### Copy the file "foobar.txt" from the local host to a remote host
 
     scp foobar.txt your_username@remotehost:/some/remote/directory 
+    
+
+### -r Recursively copy entire directories
+
+    scp -r user@your.server.example.com:/path/to/foo /home/user/Desktop/
+
+
 
 ### Copy the directory "foo" from the local host to a remote host's directory "bar"
 
