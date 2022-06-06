@@ -3,6 +3,9 @@
 ffmpeg -i iput.VOB output.mp4
 ffmpeg -i iput.m4b output.mp3
 ```
+## split by timestamp
+
+ffmpeg -ss 00:00:00 -t 00:50:00 -i largefile.mp4 -acodec copy \-vcodec copy smallfile.mp4
 
 ### Crop pixels from the bottom
 ```
