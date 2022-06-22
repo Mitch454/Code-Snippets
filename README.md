@@ -1,7 +1,9 @@
-# Code-Snippets
-Some assorted code snippets
 
-## Grub change kernel
+# Linux Sysadmin Cheatsheet
+
+## Some assorted code snippets
+
+### Grub change kernel
 ```
 export GRUB_CONFIG=`sudo find /boot -name "grub.cfg"`
 sudo grep 'menuentry ' $GRUB_CONFIG | cut -f 2 -d "'" | nl -v 0
@@ -10,7 +12,7 @@ sudo update-grub
 sudo reboot
 ```
 
-## CIFS mount win share
+### CIFS mount win share
 ```
 sudo mount -t cifs -o username={user.name},password={password},uid=1001,gid=1001 //192.168.1.206/sharename /mnt/mountpoint/
 ```
@@ -19,11 +21,8 @@ or
 sudo mount -t cifs -o credentials=/etc/win-credentials,dir_mode=0755,file_mode=0755 //WIN_SHARE_IP/<share_name> /mnt/win_share
 ```
 
-## Linux Sysadmin Cheatsheet
-
-
-# Content <!-- omit in toc -->
-- [Basics](#basics)
+## Bookmarks
+  - [Basics](#basics)
   - [File Hierarchy Standard (FHS)](#file-hierarchy-standard-fhs)
   - [Commands](#commands)
   - [Globs (Wildcards)](#globs-wildcards)
