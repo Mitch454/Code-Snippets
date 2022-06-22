@@ -12,4 +12,10 @@ sudo reboot
 
 
 ### CIFS mount win share
+```
+sudo mount -t cifs -o username={user.name},password={password},uid=1001,gid=1001 //192.168.1.206/sharename /mnt/mountpoint/
+```
+or 
+```
 sudo mount -t cifs -o credentials=/etc/win-credentials,dir_mode=0755,file_mode=0755 //WIN_SHARE_IP/<share_name> /mnt/win_share
+```
