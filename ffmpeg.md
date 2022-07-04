@@ -4,15 +4,19 @@ ffmpeg -i iput.VOB output.mp4
 ffmpeg -i iput.m4b output.mp3
 ```
 ## split by timestamp
+```
 ffmpeg -ss 00:00:00 -t 00:50:00 -i largefile.mp4 -acodec copy \-vcodec copy smallfile.mp4
-
+```
 
 ## Crop 16:9 to 9:16
+```
  ffmpeg -i input.mkv -filter:v "crop=9/16*ih:ih" output33.mp4
-
+```
 
 ## letterbox pad for 9:16
+```
 ffmpeg -i input.mkv -vf "pad=iw:2*trunc(iw*16/18):(ow-iw)/2:(oh-ih)/2,setsar=1" -c:a copy output_letterbox.mp4
+```
 
 ### Crop pixels from the bottom
 ```
