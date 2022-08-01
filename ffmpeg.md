@@ -8,6 +8,10 @@ ffmpeg -i iput.m4b output.mp3
 ffmpeg -ss 00:00:00 -t 00:50:00 -i largefile.mp4 -acodec copy \-vcodec copy smallfile.mp4
 ```
 
+## concat
+(for %i in (*.mp4) do @echo file '%i') > mylist.txt  &&  ffmpeg -f concat -i mylist.txt -c copy output.mp4 
+
+
 ## Crop 16:9 to 9:16
 ```
  ffmpeg -i input.mkv -filter:v "crop=9/16*ih:ih" output33.mp4
@@ -16,11 +20,6 @@ ffmpeg -ss 00:00:00 -t 00:50:00 -i largefile.mp4 -acodec copy \-vcodec copy smal
 ## letterbox pad for 9:16
 ```
 ffmpeg -i input.mkv -vf "pad=iw:2*trunc(iw*16/18):(ow-iw)/2:(oh-ih)/2,setsar=1" -c:a copy output_letterbox.mp4
-```
-
-### Crop pixels from the bottom
-```
-ffmpeg -i input.mp4 -filter_complex "[0:v]crop=in_w:in_h-10:0:0[cropped]" -map "[cropped]" output.mp4
 ```
 
 ### rotate,  res++
