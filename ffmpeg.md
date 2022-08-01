@@ -8,8 +8,13 @@ ffmpeg -i iput.m4b output.mp3
 ffmpeg -ss 00:00:00 -t 00:50:00 -i largefile.mp4 -acodec copy \-vcodec copy smallfile.mp4
 ```
 
+
+
 ## concat
+```
 (for %i in (*.mp4) do @echo file '%i') > mylist.txt  &&  ffmpeg -f concat -i mylist.txt -c copy output.mp4 
+```
+
 
 
 ## Crop 16:9 to 9:16
