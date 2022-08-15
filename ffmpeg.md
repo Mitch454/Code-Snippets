@@ -15,6 +15,15 @@ ffmpeg -ss 00:00:00 -t 00:50:00 -i largefile.mp4 -acodec copy \-vcodec copy smal
 (for %i in (*.mp4) do @echo file '%i') > mylist.txt  &&  ffmpeg -f concat -i mylist.txt -c copy output.mp4 
 ```
 
+# yt-dl clip from stream
+```
+Use youtube-dl --youtube-skip-dash-manifest -g "URL" to get the video and audio streams.
+
+Now use:
+
+ffmpeg -ss 12:15 -i "1st-URL" -ss 12:15 -i "2nd-URL" -t 5:15 -map 0:v -map 1:a -c:v libx264 -c:a aac output.mkv
+
+```
 
 
 ## Crop 16:9 to 9:16
