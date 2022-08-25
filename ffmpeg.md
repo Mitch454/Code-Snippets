@@ -8,6 +8,12 @@ ffmpeg -i iput.m4b output.mp3
 ffmpeg -ss 00:00:00 -t 00:50:00 -i largefile.mp4 -acodec copy \-vcodec copy smallfile.mp4
 ```
 
+crop pixels
+
+top and bottom
+```
+ffmpeg -i input.mp4 -filter:v "crop=iw:ih-200" output.mp4
+```
 
 
 ## concat
