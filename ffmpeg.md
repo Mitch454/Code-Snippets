@@ -8,13 +8,19 @@ ffmpeg -i iput.m4b output.mp3
 ffmpeg -ss 00:00:00 -t 00:50:00 -i largefile.mp4 -acodec copy \-vcodec copy smallfile.mp4
 ```
 
-crop pixels
+## crop pixels
 
 top and bottom
 ```
 ffmpeg -i input.mp4 -filter:v "crop=iw:ih-200" output.mp4
 ```
 
+## add audio with volume
+
+
+```
+ffmpeg -i video.mp4 -filter_complex "amovie=audio.mp3:loop=0,asetpts=N/SR/TB,volume=0.2[audio];[0:a]volume=3[sa];[sa][audio]amix[fa]" -map 0:v -map [fa] -vcodec libx264 -preset ultrafast -shortest output.mp4
+```
 
 ## concat
 ```
