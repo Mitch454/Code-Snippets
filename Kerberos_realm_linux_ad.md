@@ -1,4 +1,4 @@
-### Ubuntu as AD
+## Ubuntu as AD
 
 For this example, we will use the domain ‘company.com‘ and the server will have the name ‘srv‘.
 
@@ -95,7 +95,11 @@ sudo samba-tool visualize reps
 
 
 
-### NAME
+
+
+
+
+## REALM COMMAND
        realm - Manage enrollment in realms
 
 SYNOPSIS
