@@ -48,6 +48,7 @@ samba-tool domain level show
 
 rm /etc/resolv.conf
 echo 'nameserver 127.0.0.1' >> /etc/resolv.conf
+```
 
 DONE! Now check that everything is working properly:
 
@@ -59,8 +60,8 @@ If all the ping were resolved and the pings went through, go ahead and try to jo
 
 Now joining the computers to the domain and create users in the AD.
 
-Most popular commands of commands:
-
+Most popular commands
+```
 sudo samba-tool user list
 sudo samba-tool user create UserName
 sudo samba-tool user delete UserName
@@ -75,9 +76,8 @@ sudo samba-tool group delete GroupName
 sudo samba-tool group addmembers GroupName UserName
 sudo samba-tool group removemembers GroupName UserName
 sudo samba-tool computer list
-
-Few other commands for special requests:
-
+```
+```
 sudo samba-tool group add –h
 sudo samba-tool user add -h
 sudo samba-tool user add domainName --given-name=givenName --surname=surName --mail-address=userName@example.com --login-shell=/bin/bash
@@ -91,3 +91,4 @@ sudo samba-tool dns zonecreate domain.local 0.0.10.in-addr.arpa -U Administrator
 sudo samba-tool processes
 sudo samba-tool visualize ntdsconn
 sudo samba-tool visualize reps
+```
