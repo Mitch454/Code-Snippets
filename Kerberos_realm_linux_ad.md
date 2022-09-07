@@ -97,6 +97,24 @@ sudo samba-tool visualize reps
 
 
 
+## netplan example
+
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens33:
+      addresses:
+        - 192.168.227.135/24
+      nameservers:
+        search: [COMPANY.COM]
+        addresses: [192.168.227.131, 1.1.1.1]
+      routes:
+        - to: default
+          via: 192.168.227.2
+
+
+
 
 
 ## REALM COMMAND
