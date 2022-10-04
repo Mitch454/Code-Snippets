@@ -15,6 +15,20 @@ top and bottom
 ffmpeg -i input.mp4 -filter:v "crop=iw:ih-200" output.mp4
 ```
 
+
+## add subs from file
+
+```
+ffmpeg -i "imput.mp4" -lavfi "subtitles=subtitles.srt:force_style='Alignment=0,OutlineColour=&H100000000,BorderStyle=3,Outline=1,Shadow=0,Fontsize=18,MarginL=5,MarginV=25'" -crf 1 -c:a copy "output.mp4"
+
+
+ffmpeg -y -i "input.mp4" -vf "subtitles=subtitles.srt:fontsdir=fonts:force_style='Fontname=Arturo Trial,Fontsize=10'" output.mp4
+
+```
+
+
+
+
 ## add audio with volume
 
 
