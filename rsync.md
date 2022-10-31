@@ -1,0 +1,33 @@
+
+
+```
+rsync -a --exclude 'dir1' src_directory/ dst_directory/
+
+
+```
+
+
+```
+Local to Local:  
+	rsync [OPTION]... [SRC]... DEST
+Local to Remote: 
+	rsync [OPTION]... [SRC]... [USER@]HOST:DEST
+Remote to Local: 
+	rsync [OPTION]... [USER@]HOST:SRC... [DEST]
+
+```
+
+
+
+/etc/apache2/sites-available
+/etc/apache2/sites-enabled
+/etc/apache2/conf-available
+/etc/apache2/conf-enabled
+
+/home/mitch
+
+
+/django     except /venv
+
+
+
